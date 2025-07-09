@@ -26,11 +26,11 @@
         <div class="col-12 col-md-6 text-bg-primary">
           <div class="d-flex align-items-center justify-content-center h-100">
             <div class="col-10 col-xl-8 py-3">
-              <img class="img-fluid rounded mb-4" loading="lazy" src="/cdn/imagenes/<?php echo LOGO; ?>" width="245" height="80" alt="Logo">
+              <img class="img-fluid rounded mb-4" loading="lazy" src="/milogo.png" width="245" height="80" alt="Logo"><!-- ** Logo desde una ruta absoluta  ** -->
               <hr class="border-primary-subtle mb-4">
-              <h2 class="h1 mb-4">Sistema de Imprenta.</h2>
-              <p class="lead m-0">juan.aguilar@imced.edu.mx.</p>
-				<p class="lead m-0" style="font-size: 0.7em;">Versión: <?php echo version;?></p>
+              <h2 class="h1 mb-4">Sistema de Login</h2> <!-- ** Titulo general  ** -->
+              <p class="lead m-0">contacto@mipagina.com</p> <!-- ** Segunda linea editable  ** -->
+				<p class="lead m-0" style="font-size: 0.7em;">Año: 2025</p>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
                 </div>
               </div>
             </div>
-            <form id="form_login">
+            <form id="form_login" method="post" action="login.php">
               <div class="row gy-3 gy-md-4 overflow-hidden">
                 <div class="col-12">
                   <label for="email" class="form-label">Correo/Usuario <span class="text-danger">*</span></label>
@@ -54,37 +54,17 @@
                   <input type="password" class="form-control" name="password" id="password" value="" required>
                 </div>
                 <div class="col-12">
-                  <div class="form-check collapse">
-                    <input class="form-check-input" type="checkbox" value="" name="remember_me" id="remember_me">
-                    <label class="form-check-label text-secondary" for="remember_me">
-                      Soy administrador!
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
                   <div class="d-grid">
-                    <button class="btn bsb-btn-xl btn-primary" type="button" onClick="login_fun();">Ingresa ahora!</button>
+                    <button class="btn bsb-btn-xl btn-primary" type="submit">Ingresa ahora!</button>
                   </div>
                 </div>
-              </div>
-				<script>
-				$(document).keyup(function(event) {
-    if ($(".form-control").is(":focus") && event.key == "Enter") {
-        login_fun()
-    }
-});
-				</script>
+              </div>	
             </form>
             <div class="row">
               <div class="col-12">
                 <hr class="mt-5 mb-4 border-secondary-subtle">
                 <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end">
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12" id="alertas">
-               
               </div>
             </div>
           </div>
