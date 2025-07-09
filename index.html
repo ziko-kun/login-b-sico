@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es"> <!-- ** Idioma prinicpal o detectado  ** -->
+<head><!-- ** inicio del encabezado de la pagina HTML  ** -->
+<meta charset="utf-8"><!-- ** Codificación del idioma  ** -->
+<meta name="description" content="Login basico"><!-- ** Descripción del sitio  ** -->
+<meta name="keywords" content="login,inicio,basico"><!-- **  Palabras claves que describan nuestro sitio ** -->
+<meta name="author" content="Juan Manuel Aguilar Díaz"><!-- **   ** -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- ** Indicamos la escala de trabajo  ** -->
+<title>Login basico</title><!-- ** Titulo que aparecerá en nuestra barra de navegación  ** -->
+      
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"><!-- ** Llamamos a BOOTSTRAP que contiene los elementos visuales o CSS  ** -->
+	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script><!-- ** Complemento de BOOTSTRAP con funciones javascript para visualizar o ejectutar funciones  ** -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"><!-- ** Complemento con iconos para una mejor vista  ** -->
+  
+</head><!-- **  Finalizamos el encabezado HTML ** -->
+
+<body><!-- **  Inicia el cuerpo o pagina ** -->
+
+  
+<section class="p-3 p-md-4 p-xl-5">
+  <div class="container">
+    <div class="card border-light-subtle shadow-sm">
+      <div class="row g-0">
+        <div class="col-12 col-md-6 text-bg-primary">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <div class="col-10 col-xl-8 py-3">
+              <img class="img-fluid rounded mb-4" loading="lazy" src="/cdn/imagenes/<?php echo LOGO; ?>" width="245" height="80" alt="Logo">
+              <hr class="border-primary-subtle mb-4">
+              <h2 class="h1 mb-4">Sistema de Imprenta.</h2>
+              <p class="lead m-0">juan.aguilar@imced.edu.mx.</p>
+				<p class="lead m-0" style="font-size: 0.7em;">Versión: <?php echo version;?></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card-body p-3 p-md-4 p-xl-5">
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-5">
+                  <h3>Ingresar</h3>
+                </div>
+              </div>
+            </div>
+            <form id="form_login">
+              <div class="row gy-3 gy-md-4 overflow-hidden">
+                <div class="col-12">
+                  <label for="email" class="form-label">Correo/Usuario <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                </div>
+                <div class="col-12">
+                  <label for="password" class="form-label">Contraseña <span class="text-danger">*</span></label>
+                  <input type="password" class="form-control" name="password" id="password" value="" required>
+                </div>
+                <div class="col-12">
+                  <div class="form-check collapse">
+                    <input class="form-check-input" type="checkbox" value="" name="remember_me" id="remember_me">
+                    <label class="form-check-label text-secondary" for="remember_me">
+                      Soy administrador!
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button class="btn bsb-btn-xl btn-primary" type="button" onClick="login_fun();">Ingresa ahora!</button>
+                  </div>
+                </div>
+              </div>
+				<script>
+				$(document).keyup(function(event) {
+    if ($(".form-control").is(":focus") && event.key == "Enter") {
+        login_fun()
+    }
+});
+				</script>
+            </form>
+            <div class="row">
+              <div class="col-12">
+                <hr class="mt-5 mb-4 border-secondary-subtle">
+                <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" id="alertas">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+	
+
+</body><!-- ** Termina el cuerpo o pagina  ** -->
+</html><!-- ** Termina el documento HTML  ** -->
